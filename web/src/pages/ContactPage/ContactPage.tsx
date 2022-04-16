@@ -20,7 +20,7 @@ const CREATE_CONTACT = gql`
 `
 
 const ContactPage = () => {
-  const formMethods = useForm()
+  const formMethods = useForm({ mode: 'onBlur' })
 
   const [create, { loading, error }] = useMutation(CREATE_CONTACT, {
     onCompleted: () => {
@@ -38,12 +38,7 @@ const ContactPage = () => {
       <MetaTags title="Contact" description="Contact page" />
 
       <Toaster />
-      <Form
-        onSubmit={onSubmit}
-        config={{ mode: 'onBlur' }}
-        formMethods={formMethods}
-        error={error}
-      >
+      <Form onSubmit={onSubmit} formMethods={formMethods} error={error}>
         <FormError error={error} wrapperClassName="form-error" />
 
         <Label name="name" errorClassName="error">
