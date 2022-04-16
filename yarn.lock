@@ -3659,7 +3659,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/api@npm:1.0.2":
+"@redwoodjs/api@npm:1.0.2, @redwoodjs/api@npm:^1.0.2":
   version: 1.0.2
   resolution: "@redwoodjs/api@npm:1.0.2"
   dependencies:
@@ -3748,7 +3748,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/core@npm:1.0.2":
+"@redwoodjs/core@npm:^1.0.2":
   version: 1.0.2
   resolution: "@redwoodjs/core@npm:1.0.2"
   dependencies:
@@ -3847,7 +3847,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/forms@npm:1.0.2":
+"@redwoodjs/forms@npm:^1.0.2":
   version: 1.0.2
   resolution: "@redwoodjs/forms@npm:1.0.2"
   dependencies:
@@ -3861,7 +3861,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/graphql-server@npm:1.0.2":
+"@redwoodjs/graphql-server@npm:1.0.2, @redwoodjs/graphql-server@npm:^1.0.2":
   version: 1.0.2
   resolution: "@redwoodjs/graphql-server@npm:1.0.2"
   dependencies:
@@ -3949,7 +3949,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/router@npm:1.0.2":
+"@redwoodjs/router@npm:1.0.2, @redwoodjs/router@npm:^1.0.2":
   version: 1.0.2
   resolution: "@redwoodjs/router@npm:1.0.2"
   dependencies:
@@ -4041,7 +4041,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/web@npm:1.0.2":
+"@redwoodjs/web@npm:1.0.2, @redwoodjs/web@npm:^1.0.2":
   version: 1.0.2
   resolution: "@redwoodjs/web@npm:1.0.2"
   dependencies:
@@ -6833,8 +6833,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "api@workspace:api"
   dependencies:
-    "@redwoodjs/api": 1.0.2
-    "@redwoodjs/graphql-server": 1.0.2
+    "@redwoodjs/api": ^1.0.2
+    "@redwoodjs/graphql-server": ^1.0.2
   languageName: unknown
   linkType: soft
 
@@ -20143,7 +20143,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@redwoodjs/core": 1.0.2
+    "@redwoodjs/core": ^1.0.2
     lodash: ^4.17.21
   languageName: unknown
   linkType: soft
@@ -23042,9 +23042,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web@workspace:web"
   dependencies:
-    "@redwoodjs/forms": 1.0.2
-    "@redwoodjs/router": 1.0.2
-    "@redwoodjs/web": 1.0.2
+    "@redwoodjs/forms": ^1.0.2
+    "@redwoodjs/router": ^1.0.2
+    "@redwoodjs/web": ^1.0.2
     prop-types: 15.8.1
     react: 17.0.2
     react-dom: 17.0.2
