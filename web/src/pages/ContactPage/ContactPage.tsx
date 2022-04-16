@@ -18,15 +18,27 @@ const ContactPage = () => {
 
       <Form onSubmit={onSubmit}>
         <label htmlFor="name">Name</label>
-        <TextField name="name" validation={{ required: true }} />
+        <TextField
+          name="name"
+          validation={{ required: true }}
+          errorClassName="error"
+        />
         <FieldError name="name" className="error" />
 
         <label htmlFor="email">Email</label>
-        <TextField name="email" validation={{ required: true }} />
+        <TextField
+          name="email"
+          validation={{ required: true }}
+          errorClassName="error"
+        />
         <FieldError name="email" className="error" />
 
         <label htmlFor="message">Message</label>
-        <TextAreaField name="message" validation={{ required: true }} />
+        <TextAreaField
+          name="message"
+          validation={{ required: true }}
+          errorClassName="error"
+        />
         <FieldError name="message" className="error" />
 
         <Submit>Save</Submit>
