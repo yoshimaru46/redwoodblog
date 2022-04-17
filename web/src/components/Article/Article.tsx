@@ -23,7 +23,7 @@ const Article = ({ article, summary = false }) => {
         <div>
           <CommentForm postId={article.id} />
           <div style={{ marginTop: '10px' }}>
-            <CommentsCell />
+            <CommentsCell postId={article.id} />
           </div>
         </div>
       )}

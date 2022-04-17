@@ -1,3 +1,4 @@
+import { db } from 'src/lib/db'
 import { comments, createComment } from './comments'
 import type { StandardScenario } from './comments.scenarios'
 
@@ -8,11 +9,18 @@ import type { StandardScenario } from './comments.scenarios'
 // https://redwoodjs.com/docs/testing#jest-expect-type-considerations
 
 describe('comments', () => {
-  scenario('returns all comments', async (scenario: StandardScenario) => {
-    const result = await comments()
+  scenario(
+    'returns all comments for a single post from the database',
+    async (scenario: StandardScenario) => {
+      const result = await comments({ postId: scenario.comment.jane.postId })
 
-    expect(result.length).toEqual(Object.keys(scenario.comment).length)
-  })
+      const post = await db.post.findUnique({
+        where: { id: scenario.comment.jane.postId },
+        include: { comments: true },
+      })
+      expect(result.length).toEqual(post.comments.length)
+    }
+  )
 
   scenario('postOnly', 'creates a new comment', async (scenario) => {
     const comment = await createComment({
