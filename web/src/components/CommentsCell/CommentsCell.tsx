@@ -1,11 +1,14 @@
 import type { CommentsQuery } from 'types/graphql'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
-
+import Comment from 'src/components/Comment'
 
 export const QUERY = gql`
   query CommentsQuery {
     comments {
       id
+      name
+      body
+      createdAt
     }
   }
 `
@@ -21,9 +24,9 @@ export const Failure = ({ error }: CellFailureProps) => (
 export const Success = ({ comments }: CellSuccessProps<CommentsQuery>) => {
   return (
     <ul>
-      {comments.map((item) => {
-        return <li key={item.id}>{JSON.stringify(item)}</li>
-      })}
+      {comments.map((comment) => (
+        <Comment key={comment.id} comment={comment} />
+      ))}
     </ul>
   )
 }
